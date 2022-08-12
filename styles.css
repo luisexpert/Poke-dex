@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display-swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300, 400&display-swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,42,166,1) 0%, rgba(0,212,255,1) 100%);
+    font-family: 'Lato';
+    margin: 0;
+}
+h1{
+    color: white;
+}
+
+.card{
+    list-style: none;
+    padding: 40px;
+    background-color: #F4F4F4;  
+    display: grid; 
+    text-align: center;
+}
+.card:hover{
+    animation: bounce 0.3s linear;
+}
+@keyframes bounce{
+    20%{
+        transform: translateY(-12px);
+    }
+    40%{
+        transform: translateY(0);
+    }
+    80%{
+        transform: translateY(-2px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.card-title{
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.card-subtitle{
+    font-size: 'Lato';
+    margin-top: 5px;
+}
+
+.card-image{
+    height: 180px;
+    margin: 0 auto;
+}
+
+#pokedex{
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+.container{
+    padding: 40px;
+    margin: 0 auto;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #F4F4F4;
+    opacity: 0.95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#closeBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
